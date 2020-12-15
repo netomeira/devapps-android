@@ -10,9 +10,9 @@
         android:id="@+id/buttonExplicit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="152dp"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="24dp"
         android:text="Explicit"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -20,59 +20,59 @@
         android:id="@+id/buttonImplicit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="152dp"
-        android:layout_marginTop="44dp"
+        android:layout_marginTop="24dp"
         android:text="Implicit"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/buttonExplicit"
+        app:layout_constraintStart_toStartOf="@+id/buttonExplicit"
         app:layout_constraintTop_toBottomOf="@+id/buttonExplicit" />
 
     <Button
         android:id="@+id/buttonImplicitCategory"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="152dp"
-        android:layout_marginTop="44dp"
+        android:layout_marginTop="24dp"
         android:text="ImplicitCategory"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/buttonImplicit"
+        app:layout_constraintStart_toStartOf="@+id/buttonImplicit"
         app:layout_constraintTop_toBottomOf="@+id/buttonImplicit" />
 
     <Button
         android:id="@+id/buttonOpenPage"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="152dp"
-        android:layout_marginTop="44dp"
+        android:layout_marginTop="24dp"
         android:text="Open Page"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/buttonImplicitCategory"
+        app:layout_constraintStart_toStartOf="@+id/buttonImplicitCategory"
         app:layout_constraintTop_toBottomOf="@+id/buttonImplicitCategory" />
 
     <Button
         android:id="@+id/buttonMakeCall"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="152dp"
-        android:layout_marginTop="44dp"
+        android:layout_marginTop="24dp"
         android:text="Make Call"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/buttonOpenPage"
+        app:layout_constraintStart_toStartOf="@+id/buttonOpenPage"
         app:layout_constraintTop_toBottomOf="@+id/buttonOpenPage" />
 
     <Button
         android:id="@+id/buttonCreateAlarm"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="152dp"
-        android:layout_marginTop="44dp"
+        android:layout_marginTop="24dp"
         android:text="Create Alarm"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/buttonMakeCall"
+        app:layout_constraintStart_toStartOf="@+id/buttonMakeCall"
         app:layout_constraintTop_toBottomOf="@+id/buttonMakeCall" />
 
     <Button
         android:id="@+id/buttonViewMap"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="160dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="28dp"
         android:text="View Map"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/buttonCreateAlarm"
+        app:layout_constraintStart_toStartOf="@+id/buttonCreateAlarm"
         app:layout_constraintTop_toBottomOf="@+id/buttonCreateAlarm" />
 </androidx.constraintlayout.widget.ConstraintLayout>
