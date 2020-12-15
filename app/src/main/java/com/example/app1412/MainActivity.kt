@@ -18,6 +18,28 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+        buttonImplicit.setOnClickListener(){
+            val intent = Intent().apply {
+                setAction("SECUNDARIA")
+            }
+
+            if (intent.resolveActivity(packageManager) != null) {
+                Log.d("HSS", "Start activity action SECUNDARIA")
+                startActivity(intent)
+            }
+        }
+
+        buttonImplicitCategory.setOnClickListener(){
+            val intent = Intent().apply {
+                setAction("TERCIARIA")
+            }
+
+            if (intent.resolveActivity(packageManager) != null) {
+                Log.d("HSS", "Start activity action TERCIARIA")
+                startActivity(intent)
+            }
+        }
+
         buttonOpenPage.setOnClickListener(){
             val intent = Intent().apply {
                 setAction(Intent.ACTION_VIEW)
@@ -50,6 +72,18 @@ class MainActivity : AppCompatActivity() {
             createAlarm("Test", 21, 39)
         }
 
+        buttonViewMap.setOnClickListener(){
+            val mapIntent: Intent = Uri.parse(
+                "geo:0,0?q=1600+Amphitheatre+Parkway,+Mountain+View,+California"
+            ).let { location ->
+                // Or map point based on latitude/longitude
+                // Uri location = Uri.parse("geo:37.422219,-122.08364?z=14"); // z param is zoom level
+                Intent(Intent.ACTION_VIEW, location)
+            }
+            if (mapIntent.resolveActivity(packageManager) != null) {
+                startActivity(intent)
+            }
+        }
     }
 
     fun createAlarm(message: String, hour: Int, minutes: Int) {

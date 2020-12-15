@@ -13,28 +13,25 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.App1412">
 
-        <uses-library
-            android:name="com.google.android.wearable"
-            android:required="true" />
-        <!--
-               Set to true if your app is Standalone, that is, it does not require the handheld
-               app to run.
-        -->
-        <meta-data
-            android:name="com.google.android.wearable.standalone"
-            android:value="true" />
-
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity android:name=".ActivitySecundaria">
             <intent-filter>
                 <action android:name="SECUNDARIA" />
+
                 <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".ActivityTerciaria">
+            <intent-filter>
+                <action android:name="TERCIARIA" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.CUSTOM_CATEGORIA" />
             </intent-filter>
         </activity>
     </application>
